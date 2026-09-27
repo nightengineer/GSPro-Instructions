@@ -1,0 +1,111 @@
+{
+  "regru_timeweb_kits_identical": true,
+  "kit_sha256": "7e29c8f10bef1d2f6425453d8955fb01db51ac54790092d9d509ea2c4b5b2110",
+  "kit_members": 16,
+  "tools_comparison": [
+    {
+      "file": "README.md",
+      "sha256": "5642902002de5dd3d7eeff044c627d13ee46365380fa7d838349ecc563f2a667",
+      "vps_versions": [
+        {
+          "path": "/root/backups/recovery-kit/README.md",
+          "matches_s3": true
+        }
+      ],
+      "master_fixture_matches": null
+    },
+    {
+      "file": "download-backup.py",
+      "sha256": "77c87c54607907c1bea3ed0cdd6734ccbd12c73de5c93f0b714b46eeeac59a1b",
+      "vps_versions": [
+        {
+          "path": "/root/backups/recovery-kit/download-backup.py",
+          "matches_s3": true
+        }
+      ],
+      "master_fixture_matches": true
+    },
+    {
+      "file": "tools/decrypt-cms-stream.py",
+      "sha256": "a01cdd9fc8e9ebf3ec2fdfea98533312a54579a04aa8720c4e9bb841ccf46728",
+      "vps_versions": [
+        {
+          "path": "/root/backups/recovery-kit/tools/decrypt-cms-stream.py",
+          "matches_s3": true
+        },
+        {
+          "path": "/opt/gspro/Восстановление/decrypt-cms-stream.py",
+          "matches_s3": true
+        }
+      ],
+      "master_fixture_matches": null
+    },
+    {
+      "file": "tools/deploy-new-vps.sh",
+      "sha256": "4367a4b046a2952aa60bffbafa0153b7322c05605594a61d45f91d2163fd19e3",
+      "vps_versions": [
+        {
+          "path": "/root/backups/recovery-kit/tools/deploy-new-vps.sh",
+          "matches_s3": true
+        },
+        {
+          "path": "/opt/gspro/Восстановление/deploy-new-vps.sh",
+          "matches_s3": false
+        }
+      ],
+      "master_fixture_matches": true
+    },
+    {
+      "file": "tools/restore.sh",
+      "sha256": "99663a70e6e0f6fa4fd13c046a96569288855fe6cff87224f2aa9add7a4a8308",
+      "vps_versions": [
+        {
+          "path": "/root/backups/recovery-kit/tools/restore.sh",
+          "matches_s3": true
+        },
+        {
+          "path": "/opt/gspro/Восстановление/restore.sh",
+          "matches_s3": true
+        }
+      ],
+      "master_fixture_matches": null
+    }
+  ],
+  "s3_object_groups": {
+    "regru": {
+      "daily": 1,
+      "monthly": 0,
+      "pre-release": 0
+    },
+    "timeweb": {
+      "daily": 4,
+      "monthly": 1,
+      "pre-release": 1
+    }
+  },
+  "inspection_date": "2026-09-28",
+  "vps_and_s3_read_only": true,
+  "test_results": {
+    "passed": true,
+    "checks": [
+      "OpenSSL streaming AES-GCM roundtrip",
+      "Tampered CMS rejected and partial output removed",
+      "Wrong key password rejected",
+      "Unavailable hidden password input fails closed",
+      "Bash syntax: tools/deploy-new-vps.sh",
+      "Bash syntax: tools/restore.sh",
+      "Staged restore guard START_PUBLIC_SERVICES=true",
+      "Staged restore guard START_PUBLIC_SERVICES=false"
+    ],
+    "count": 8,
+    "synthetic_data_only": true,
+    "fresh_ubuntu_install_tested": false,
+    "vps_and_s3_unchanged": true
+  },
+  "public_edits": {
+    "decrypt-cms-stream.py": "Fail closed if hidden password input is unavailable",
+    "deploy-new-vps.sh": "Refuse START_PUBLIC_SERVICES=true before system changes"
+  },
+  "encrypted_private_key_published": false,
+  "credentials_published": false
+}

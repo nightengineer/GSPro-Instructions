@@ -1,0 +1,4 @@
+77c87c54607907c1bea3ed0cdd6734ccbd12c73de5c93f0b714b46eeeac59a1b  download-backup.py
+44c3bee4b2a1f8f67ecd2306364751b73aabc409ec14662795c76c8362924af3  tools/decrypt-cms-stream.py
+52c4f43fa66080f374907ec07cfb649d42ef103f86f5aade05529ddc1d713c43  tools/deploy-new-vps.sh
+99663a70e6e0f6fa4fd13c046a96569288855fe6cff87224f2aa9add7a4a8308  tools/restore.sh

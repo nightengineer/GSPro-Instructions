@@ -1,6 +1,6 @@
 # Потоки GSPro
 
-Актуальность: 26.09.2026. Схемы дополняют карточки и не содержат credentials.
+Актуальность: 28.09.2026. Схемы дополняют карточки и не содержат credentials.
 
 ## Компоненты
 
@@ -17,7 +17,8 @@ flowchart LR
  W --> E[SMTP / email API]
  D --> K[Закрытый backup]
  B -->|SQLite snapshot| K
- K -->|шифрование + read-back| S[S3]
+ K -->|шифрование + read-back| S1[Timeweb S3]
+  K -->|шифрование + read-back| S2[REG.RU S3]
  G[GitHub: код и docs] --> R[Проверки и сборка]
  R --> W
  R --> M
