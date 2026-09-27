@@ -1,0 +1,8 @@
+.env
+.env.*
+*credentials*.json
+*.cms
+*.pem
+*.dump
+*.sqlite
+__pycache__/

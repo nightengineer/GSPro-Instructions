@@ -1,0 +1,431 @@
+Source check OK: 274 files
+TAP version 13
+# Subtest: UID: accepts exactly its fields and rejects each missing required field
+ok 1 - UID: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 3.521558
+  type: 'test'
+  ...
+# Subtest: LOGIN: accepts exactly its fields and rejects each missing required field
+ok 2 - LOGIN: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.238807
+  type: 'test'
+  ...
+# Subtest: PASSWORD: accepts exactly its fields and rejects each missing required field
+ok 3 - PASSWORD: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.216696
+  type: 'test'
+  ...
+# Subtest: UID_LOGIN: accepts exactly its fields and rejects each missing required field
+ok 4 - UID_LOGIN: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.297679
+  type: 'test'
+  ...
+# Subtest: UID_PASSWORD: accepts exactly its fields and rejects each missing required field
+ok 5 - UID_PASSWORD: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.359901
+  type: 'test'
+  ...
+# Subtest: CREDENTIALS: accepts exactly its fields and rejects each missing required field
+ok 6 - CREDENTIALS: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.217407
+  type: 'test'
+  ...
+# Subtest: UID_CREDENTIALS: accepts exactly its fields and rejects each missing required field
+ok 7 - UID_CREDENTIALS: accepts exactly its fields and rejects each missing required field
+  ---
+  duration_ms: 0.273178
+  type: 'test'
+  ...
+# Subtest: unknown modes and malformed or oversized account values are rejected
+ok 8 - unknown modes and malformed or oversized account values are rejected
+  ---
+  duration_ms: 0.591958
+  type: 'test'
+  ...
+# Subtest: login preserves order support and checkout destinations
+ok 9 - login preserves order support and checkout destinations
+  ---
+  duration_ms: 1.729843
+  type: 'test'
+  ...
+# Subtest: login rejects external URLs and routes outside checkout/account
+ok 10 - login rejects external URLs and routes outside checkout/account
+  ---
+  duration_ms: 0.303309
+  type: 'test'
+  ...
+# Subtest: sensitive value encrypts with random nonce and decrypts
+ok 11 - sensitive value encrypts with random nonce and decrypts
+  ---
+  duration_ms: 3.385474
+  type: 'test'
+  ...
+# Subtest: UID fingerprint is deterministic but does not reveal UID
+ok 12 - UID fingerprint is deterministic but does not reveal UID
+  ---
+  duration_ms: 1.29395
+  type: 'test'
+  ...
+# Subtest: signed payload expires and detects modification
+ok 13 - signed payload expires and detects modification
+  ---
+  duration_ms: 0.621809
+  type: 'test'
+  ...
+# Subtest: valid deployment configuration passes preflight
+ok 14 - valid deployment configuration passes preflight
+  ---
+  duration_ms: 59.133623
+  type: 'test'
+  ...
+# Subtest: INN must match the entire value
+ok 15 - INN must match the entire value
+  ---
+  duration_ms: 173.633895
+  type: 'test'
+  ...
+# Subtest: OGRN must match the entire value
+ok 16 - OGRN must match the entire value
+  ---
+  duration_ms: 152.860127
+  type: 'test'
+  ...
+# Subtest: sales blocked without fiscal confirmation
+ok 17 - sales blocked without fiscal confirmation
+  ---
+  duration_ms: 51.498179
+  type: 'test'
+  ...
+# Subtest: game credentials require a dedicated key and authenticated encryption
+ok 18 - game credentials require a dedicated key and authenticated encryption
+  ---
+  duration_ms: 3.910599
+  type: 'test'
+  ...
+# Subtest: per-game limit applies to packs, quantities, commission and slider
+ok 19 - per-game limit applies to packs, quantities, commission and slider
+  ---
+  duration_ms: 51.242301
+  type: 'test'
+  ...
+# Subtest: invalid configured limits fail closed
+ok 20 - invalid configured limits fail closed
+  ---
+  duration_ms: 0.431833
+  type: 'test'
+  ...
+# Subtest: payment retry uses current game cap before discounts
+ok 21 - payment retry uses current game cap before discounts
+  ---
+  duration_ms: 0.729812
+  type: 'test'
+  ...
+# Subtest: fixed offer ignores a tampered quantity and keeps server price
+ok 22 - fixed offer ignores a tampered quantity and keeps server price
+  ---
+  duration_ms: 2.156616
+  type: 'test'
+  ...
+# Subtest: another game offer and a disabled custom option are rejected
+ok 23 - another game offer and a disabled custom option are rejected
+  ---
+  duration_ms: 0.552547
+  type: 'test'
+  ...
+# Subtest: custom quantity respects integer and bounds
+ok 24 - custom quantity respects integer and bounds
+  ---
+  duration_ms: 0.481475
+  type: 'test'
+  ...
+# Subtest: slider is strictly opt-in and cannot bypass the limit
+ok 25 - slider is strictly opt-in and cannot bypass the limit
+  ---
+  duration_ms: 2.759805
+  type: 'test'
+  ...
+# Subtest: custom retry requires the game slider still enabled and respects pre-discount cap
+ok 26 - custom retry requires the game slider still enabled and respects pre-discount cap
+  ---
+  duration_ms: 29.620659
+  type: 'test'
+  ...
+# Subtest: five packs multiply contents, price and per-pack fee
+ok 27 - five packs multiply contents, price and per-pack fee
+  ---
+  duration_ms: 2.412184
+  type: 'test'
+  ...
+# Subtest: quantity is bounded and cannot multiply a custom slider order
+ok 28 - quantity is bounded and cannot multiply a custom slider order
+  ---
+  duration_ms: 0.938049
+  type: 'test'
+  ...
+# Subtest: total limit also applies to multiple packs
+ok 29 - total limit also applies to multiple packs
+  ---
+  duration_ms: 26.40634
+  type: 'test'
+  ...
+# Subtest: currency multiplication cannot exceed the order integer storage limit
+ok 30 - currency multiplication cannot exceed the order integer storage limit
+  ---
+  duration_ms: 1.435554
+  type: 'test'
+  ...
+# Subtest: exact monetary parsing rejects rounding and invalid amounts
+ok 31 - exact monetary parsing rejects rounding and invalid amounts
+  ---
+  duration_ms: 2.477516
+  type: 'test'
+  ...
+# Subtest: only documented statuses and complete callback data are accepted
+ok 32 - only documented statuses and complete callback data are accepted
+  ---
+  duration_ms: 0.704261
+  type: 'test'
+  ...
+# Subtest: callback authentication fails closed without keys or when disabled
+ok 33 - callback authentication fails closed without keys or when disabled
+  ---
+  duration_ms: 79.9586
+  type: 'test'
+  ...
+# Subtest: payment URLs are restricted to hosted Platega
+ok 34 - payment URLs are restricted to hosted Platega
+  ---
+  duration_ms: 0.484555
+  type: 'test'
+  ...
+# Subtest: general page uses v2 contract and stable user ID without account credentials
+ok 35 - general page uses v2 contract and stable user ID without account credentials
+  ---
+  duration_ms: 7.321653
+  type: 'test'
+  ...
+# Subtest: disabled payment never creates a demo link or calls network
+ok 36 - disabled payment never creates a demo link or calls network
+  ---
+  duration_ms: 0.876598
+  type: 'test'
+  ...
+# Subtest: timeouts and malformed success are uncertain; validation rejection is retryable
+ok 37 - timeouts and malformed success are uncertain; validation rejection is retryable
+  ---
+  duration_ms: 1.405975
+  type: 'test'
+  ...
+# Subtest: price is calculated in integer kopecks on server
+ok 38 - price is calculated in integer kopecks on server
+  ---
+  duration_ms: 2.806797
+  type: 'test'
+  ...
+# Subtest: price rejects fractional units
+ok 39 - price rejects fractional units
+  ---
+  duration_ms: 0.561217
+  type: 'test'
+  ...
+# Subtest: price rejects amount outside game limits
+ok 40 - price rejects amount outside game limits
+  ---
+  duration_ms: 0.227858
+  type: 'test'
+  ...
+# Subtest: Flame frame covers every side and corner symmetrically at phone and desktop sizes
+ok 41 - Flame frame covers every side and corner symmetrically at phone and desktop sizes
+  ---
+  duration_ms: 4.846258
+  type: 'test'
+  ...
+# Subtest: Public game and checkout quote do not disclose internal price components
+ok 42 - Public game and checkout quote do not disclose internal price components
+  ---
+  duration_ms: 2.486536
+  type: 'test'
+  ...
+# Subtest: Retail slider and fixed packs keep the exact existing server totals
+ok 43 - Retail slider and fixed packs keep the exact existing server totals
+  ---
+  duration_ms: 3.505948
+  type: 'test'
+  ...
+# Subtest: Payment service notice is informational and cannot change the retail total
+ok 44 - Payment service notice is informational and cannot change the retail total
+  ---
+  duration_ms: 1.60696
+  type: 'test'
+  ...
+# Subtest: TOTP RFC clock window and replay rejection
+ok 45 - TOTP RFC clock window and replay rejection
+  ---
+  duration_ms: 4.348443
+  type: 'test'
+  ...
+# Subtest: Backup codes are unique high-entropy secrets; stored values are hashes
+ok 46 - Backup codes are unique high-entropy secrets; stored values are hashes
+  ---
+  duration_ms: 2.660081
+  type: 'test'
+  ...
+# Subtest: Chat operator cannot manufacture payments or refunds
+ok 47 - Chat operator cannot manufacture payments or refunds
+  ---
+  duration_ms: 0.398501
+  type: 'test'
+  ...
+# Subtest: Staff channel permissions fail closed
+ok 48 - Staff channel permissions fail closed
+  ---
+  duration_ms: 0.377621
+  type: 'test'
+  ...
+# Subtest: structured data uses real public contacts and escapes script-closing HTML
+ok 49 - structured data uses real public contacts and escapes script-closing HTML
+  ---
+  duration_ms: 2.356952
+  type: 'test'
+  ...
+# Subtest: legacy home redirect preserves game/search/tracking parameters and remains local
+ok 50 - legacy home redirect preserves game/search/tracking parameters and remains local
+  ---
+  duration_ms: 0.563366
+  type: 'test'
+  ...
+# Subtest: custom documents receive revisions without changing required document versions
+ok 51 - custom documents receive revisions without changing required document versions
+  ---
+  duration_ms: 36.940742
+  type: 'test'
+  ...
+# Subtest: required documents and reserved or unsafe slugs are protected
+ok 52 - required documents and reserved or unsafe slugs are protected
+  ---
+  duration_ms: 1.197367
+  type: 'test'
+  ...
+# Subtest: contact links allow HTTPS and local pages, reject executable schemes
+ok 53 - contact links allow HTTPS and local pages, reject executable schemes
+  ---
+  duration_ms: 1.083513
+  type: 'test'
+  ...
+# Subtest: No web role transition can create or demote an owner
+ok 54 - No web role transition can create or demote an owner
+  ---
+  duration_ms: 1.706363
+  type: 'test'
+  ...
+# Subtest: mixed and item-only bundles preserve their composition in checkout
+ok 55 - mixed and item-only bundles preserve their composition in checkout
+  ---
+  duration_ms: 30.662189
+  type: 'test'
+  ...
+# Subtest: legacy currency packs keep displaying their saved amount
+ok 56 - legacy currency packs keep displaying their saved amount
+  ---
+  duration_ms: 0.309899
+  type: 'test'
+  ...
+# Subtest: status updates validate enum and preserve historical timestamps
+ok 57 - status updates validate enum and preserve historical timestamps
+  ---
+  duration_ms: 3.013252
+  type: 'test'
+  ...
+# Subtest: fixed pack commission rounds to whole kopecks
+ok 58 - fixed pack commission rounds to whole kopecks
+  ---
+  duration_ms: 3.215947
+  type: 'test'
+  ...
+# Subtest: custom slider step and commission are enforced
+ok 59 - custom slider step and commission are enforced
+  ---
+  duration_ms: 0.835426
+  type: 'test'
+  ...
+# Subtest: disabled products cannot be ordered
+ok 60 - disabled products cannot be ordered
+  ---
+  duration_ms: 2.092724
+  type: 'test'
+  ...
+# Subtest: promo rounding and full discount preserve integer totals
+ok 61 - promo rounding and full discount preserve integer totals
+  ---
+  duration_ms: 0.986761
+  type: 'test'
+  ...
+# Subtest: used or disabled promo is rejected
+ok 62 - used or disabled promo is rejected
+  ---
+  duration_ms: 0.761523
+  type: 'test'
+  ...
+# Subtest: Stage5 permits exactly 10000 including quantity but rejects one kopeck above
+ok 63 - Stage5 permits exactly 10000 including quantity but rejects one kopeck above
+  ---
+  duration_ms: 29.69631
+  type: 'test'
+  ...
+# Subtest: Stage5 counts commission and cannot be bypassed with a raised environment limit
+ok 64 - Stage5 counts commission and cannot be bypassed with a raised environment limit
+  ---
+  duration_ms: 0.993342
+  type: 'test'
+  ...
+# Subtest: payment retry rejects historical custom orders and oversized discounted orders
+ok 65 - payment retry rejects historical custom orders and oversized discounted orders
+  ---
+  duration_ms: 1.412343
+  type: 'test'
+  ...
+# Subtest: document publication metadata is validated and changes its saved revision
+ok 66 - document publication metadata is validated and changes its saved revision
+  ---
+  duration_ms: 11.032038
+  type: 'test'
+  ...
+# Subtest: bridge access is closed without strong configuration and exact bearer token
+ok 67 - bridge access is closed without strong configuration and exact bearer token
+  ---
+  duration_ms: 2.520717
+  type: 'test'
+  ...
+# Subtest: operator allowlist rejects absent, partial, malformed and unlisted identifiers
+ok 68 - operator allowlist rejects absent, partial, malformed and unlisted identifiers
+  ---
+  duration_ms: 0.588689
+  type: 'test'
+  ...
+# Subtest: server operator file is reread and fails closed even when env has IDs
+ok 69 - server operator file is reread and fails closed even when env has IDs
+  ---
+  duration_ms: 3.767365
+  type: 'test'
+  ...
+# Subtest: exactly six editable statuses; legacy data maps without exposing extra statuses
+ok 70 - exactly six editable statuses; legacy data maps without exposing extra statuses
+  ---
+  duration_ms: 3.173986
+  type: 'test'
+  ...
+1..70
+# tests 70
+# suites 0
+# pass 70
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3266.663637

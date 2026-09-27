@@ -1,0 +1,326 @@
+{
+  "nodes": [
+    {
+      "id": "runtime-group",
+      "type": "group",
+      "x": -620,
+      "y": 710,
+      "width": 1730,
+      "height": 1050,
+      "label": "Приложения и данные VPS",
+      "color": "4"
+    },
+    {
+      "id": "external-group",
+      "type": "group",
+      "x": -1130,
+      "y": 700,
+      "width": 490,
+      "height": 1070,
+      "label": "Внешние сервисы",
+      "color": "2"
+    },
+    {
+      "id": "operations-group",
+      "type": "group",
+      "x": -620,
+      "y": 1850,
+      "width": 1430,
+      "height": 540,
+      "label": "Выпуск и восстановление",
+      "color": "3"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "x": 520,
+      "y": 0,
+      "width": 510,
+      "height": 220,
+      "text": "# GSPro / 26.09.2026\nСиние карточки: приложение и вход.\nФиолетовая: данные и доступ.\nЖёлтые: внешние сервисы.\nЗелёные: эксплуатация.\n\nСтрелки подписывают основной обмен. Двойной щелчок открывает Markdown.",
+      "color": "4"
+    },
+    {
+      "id": "telegram",
+      "type": "text",
+      "x": 610,
+      "y": 360,
+      "width": 410,
+      "height": 220,
+      "text": "# Telegram API\nТемы, карточки и вход в Mini App.\nДействия сотрудника проходят текущие права и 2FA.\nТема может содержать email покупателя.",
+      "color": "2"
+    },
+    {
+      "id": "system",
+      "type": "file",
+      "file": "01-System.md",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 250,
+      "color": "4"
+    },
+    {
+      "id": "caddy",
+      "type": "file",
+      "file": "02-Caddy.md",
+      "x": 0,
+      "y": 360,
+      "width": 400,
+      "height": 290,
+      "color": "4"
+    },
+    {
+      "id": "web",
+      "type": "file",
+      "file": "03-Web.md",
+      "x": -540,
+      "y": 790,
+      "width": 430,
+      "height": 360,
+      "color": "4"
+    },
+    {
+      "id": "mini",
+      "type": "file",
+      "file": "04-Mini.md",
+      "x": 20,
+      "y": 790,
+      "width": 430,
+      "height": 360,
+      "color": "4"
+    },
+    {
+      "id": "bot",
+      "type": "file",
+      "file": "05-Bot.md",
+      "x": 600,
+      "y": 790,
+      "width": 430,
+      "height": 360,
+      "color": "4"
+    },
+    {
+      "id": "db",
+      "type": "file",
+      "file": "06-Data-and-access.md",
+      "x": -200,
+      "y": 1310,
+      "width": 680,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "pay",
+      "type": "file",
+      "file": "07-Payments.md",
+      "x": -1080,
+      "y": 790,
+      "width": 410,
+      "height": 430,
+      "color": "2"
+    },
+    {
+      "id": "mail",
+      "type": "file",
+      "file": "08-Mail.md",
+      "x": -1080,
+      "y": 1310,
+      "width": 410,
+      "height": 380,
+      "color": "2"
+    },
+    {
+      "id": "backup",
+      "type": "file",
+      "file": "09-Backup.md",
+      "x": 650,
+      "y": 1310,
+      "width": 430,
+      "height": 380,
+      "color": "3"
+    },
+    {
+      "id": "release",
+      "type": "file",
+      "file": "10-Release.md",
+      "x": -570,
+      "y": 1920,
+      "width": 540,
+      "height": 390,
+      "color": "3"
+    },
+    {
+      "id": "private",
+      "type": "file",
+      "file": "11-GitHub-and-private-archive.md",
+      "x": 150,
+      "y": 1920,
+      "width": 590,
+      "height": 390,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "fromNode": "system",
+      "fromSide": "bottom",
+      "toNode": "caddy",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "HTTPS",
+      "color": "4"
+    },
+    {
+      "id": "e02",
+      "fromNode": "caddy",
+      "fromSide": "bottom",
+      "toNode": "web",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "/ и /admin",
+      "color": "4"
+    },
+    {
+      "id": "e03",
+      "fromNode": "caddy",
+      "fromSide": "bottom",
+      "toNode": "mini",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "/tg-admin",
+      "color": "4"
+    },
+    {
+      "id": "e04",
+      "fromNode": "web",
+      "fromSide": "bottom",
+      "toNode": "db",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Prisma: заказы, аккаунты",
+      "color": "4"
+    },
+    {
+      "id": "e05",
+      "fromNode": "mini",
+      "fromSide": "bottom",
+      "toNode": "db",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "Prisma: операции и права",
+      "color": "4"
+    },
+    {
+      "id": "e06",
+      "fromNode": "bot",
+      "fromSide": "left",
+      "toNode": "mini",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "внутренний bridge",
+      "color": "4"
+    },
+    {
+      "id": "e07",
+      "fromNode": "bot",
+      "fromSide": "top",
+      "toNode": "telegram",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "карточки / polling",
+      "color": "2"
+    },
+    {
+      "id": "e08",
+      "fromNode": "telegram",
+      "fromSide": "left",
+      "toNode": "mini",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "initData + MFA",
+      "color": "2"
+    },
+    {
+      "id": "e09",
+      "fromNode": "web",
+      "fromSide": "left",
+      "toNode": "pay",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "создание / проверочный GET",
+      "color": "2"
+    },
+    {
+      "id": "e10",
+      "fromNode": "pay",
+      "fromSide": "right",
+      "toNode": "web",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "callback: сигнал к сверке",
+      "color": "2"
+    },
+    {
+      "id": "e11",
+      "fromNode": "web",
+      "fromSide": "bottom",
+      "toNode": "mail",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "письма по операции",
+      "color": "2"
+    },
+    {
+      "id": "e12",
+      "fromNode": "db",
+      "fromSide": "right",
+      "toNode": "backup",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "pg_dump + состояние",
+      "color": "3"
+    },
+    {
+      "id": "e13",
+      "fromNode": "bot",
+      "fromSide": "bottom",
+      "toNode": "backup",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "согласованный SQLite",
+      "color": "3"
+    },
+    {
+      "id": "e14",
+      "fromNode": "release",
+      "fromSide": "top",
+      "toNode": "web",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "сборка и запуск",
+      "color": "3"
+    },
+    {
+      "id": "e15",
+      "fromNode": "private",
+      "fromSide": "top",
+      "toNode": "backup",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "закрытый архив и ключи",
+      "color": "3"
+    },
+    {
+      "id": "e16",
+      "fromNode": "release",
+      "fromSide": "right",
+      "toNode": "private",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "код в GitHub; backup отдельно",
+      "color": "3"
+    }
+  ]
+}

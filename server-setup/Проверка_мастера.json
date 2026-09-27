@@ -1,0 +1,56 @@
+{
+  "wizard_version": "1.0.0",
+  "tests_run": 27,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "method": "Host Python standard-library tests with synthetic snapshots/credentials. Linux root, Docker status and POSIX permissions mocked in apply tests. No installer execution and no network.",
+  "limitations": [
+    "Fresh Ubuntu VPS installation, apt package availability, actual fcntl contention, SMTP/Telegram/payment integrations were not run.",
+    "Windows POSIX ownership/mode checks are reviewed statically; apply file logic/rollback tested with mocks."
+  ],
+  "bash_syntax": "passed; configured installer parsed using locally saved postgres:17-alpine /bin/bash, network none and pull never; not executed",
+  "compose_dotenv": "4/4 passed through installed Compose parser and actual temporary container environment. Saved postgres image, network none, no dependencies, pull never. No real secrets.",
+  "pdf": {
+    "pages": 23,
+    "rendered_pages": 23,
+    "characters_outside_page_safe_area": 0,
+    "visual_review": "All 23 final rendered pages inspected; no clipping, overlaps or missing Cyrillic glyphs. Two GitHub hyperlink actions verified."
+  },
+  "independent_review": "Sol high static review: variable coverage, saved-image/domain limits, immutable key checks, manifests, root/path/permissions, locking, rollback and recovery command sequence. Blocking findings resolved.",
+  "created_at": "2026-09-28",
+  "case_groups": [
+    "Valid preparation and staged apply",
+    "Immutable DB/crypto/session/tag values",
+    "Incomplete/duplicate/corrupt manifests",
+    "Tar traversal and output overlap",
+    "Getpass fallback refusal",
+    "Prepared and live key mismatch refusal",
+    "Runtime admin credential exclusion",
+    "Cancellation/repeated apply/running service refusal",
+    "File rollback after synthetic write error",
+    "Dynamic S3 downloader for live and published kit"
+  ],
+  "document_revision": "1.0.1",
+  "revised_at": "2026-09-28",
+  "bootstrap": {
+    "tests_run": 8,
+    "passed": true,
+    "coverage": [
+      "verified pair",
+      "bad checksum",
+      "SHA mismatch",
+      "announced size",
+      "size cap",
+      "no overwrite",
+      "pair rollback",
+      "getpass fallback refusal"
+    ],
+    "limits": "Mock S3 client on Windows; Ubuntu path/ownership checks independently reviewed, not exercised on a fresh VPS. No external request sent."
+  },
+  "publication": {
+    "repository": "https://github.com/nightengineer/GSPro-Instructions",
+    "source_commit": "59992ffda9c04241215b479f53b735706fff5307",
+    "independent_review": "All 140 source documentation files reviewed; private act excluded, two personal emails and historical VPS IP replaced, synthetic screenshots verified."
+  }
+}

@@ -1,0 +1,16 @@
+..................................
+----------------------------------------------------------------------
+Ran 34 tests in 13.513s
+
+OK
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).
+Private configuration created in .env (mode 600).

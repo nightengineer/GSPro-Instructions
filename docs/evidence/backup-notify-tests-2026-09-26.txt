@@ -1,0 +1,12 @@
+✔ backup notice uses independent support SMTP and current owner subscribers (1.0364ms)
+✔ explicitly disabled support profile does not fall back to legacy SMTP (0.2137ms)
+✔ no subscribers skips SMTP without connecting (0.1311ms)
+✔ support profile works when legacy technical settings row is absent (0.6497ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62.8435
